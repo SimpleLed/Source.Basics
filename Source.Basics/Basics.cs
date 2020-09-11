@@ -17,7 +17,7 @@ namespace Source.Basics
 	{
 
 		public static Assembly assembly = Assembly.GetExecutingAssembly();
-		public static Stream imageStream = assembly.GetManifestResourceStream("RainbowWave.rainbowwave.png");
+		public static Stream imageStream = assembly.GetManifestResourceStream("Source.Basics.rainbowwave.png");
 
 		[JsonIgnore]
 		public RainbowWaveConfigModel configModel = new RainbowWaveConfigModel();
@@ -78,7 +78,7 @@ namespace Source.Basics
 				{
 					Name = "Rainbow Wave",
 					Driver = this,
-					ProductImage = (Bitmap) System.Drawing.Image.FromStream(imageStream),
+					//ProductImage = (Bitmap) System.Drawing.Image.FromStream(imageStream),
 					LEDs = this.leds,
 					DeviceType = "Effect"
 				}
@@ -161,7 +161,7 @@ namespace Source.Basics
 	{
 
 		public static Assembly assembly = Assembly.GetExecutingAssembly();
-		public static Stream imageStream = assembly.GetManifestResourceStream("RainbowWave.rainbowwave.png");
+		public static Stream imageStream = assembly.GetManifestResourceStream("Source.Basics.rainbowwave.png");
 
 		[JsonIgnore]
 		public RainbowWaveConfigModel configModel = new RainbowWaveConfigModel();
@@ -222,7 +222,7 @@ namespace Source.Basics
 				{
 					Name = "Color Cycle",
 					Driver = this,
-					ProductImage = (Bitmap) System.Drawing.Image.FromStream(imageStream),
+					//ProductImage = (Bitmap) System.Drawing.Image.FromStream(imageStream),
 					LEDs = this.leds,
 					DeviceType = "Effect"
 				}

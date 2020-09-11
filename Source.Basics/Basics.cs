@@ -77,8 +77,8 @@ namespace Source.Basics
 				new ControlDevice
 				{
 					Name = "Rainbow Wave",
-					Driver = this,
-					//ProductImage = (Bitmap) System.Drawing.Image.FromStream(imageStream),
+					Driver = this, 
+                    ProductImage = (Bitmap) System.Drawing.Image.FromStream(imageStream),
 					LEDs = this.leds,
 					DeviceType = "Effect"
 				}
@@ -104,7 +104,8 @@ namespace Source.Basics
 				SupportsPush = false,
 				IsSource = true,
 				SupportsCustomConfig = true,
-				Id = Guid.Parse("e8c93cac-2379-4f8f-a4c8-8933e77e5c44")
+				Id = Guid.Parse("e8c93cac-2379-4f8f-a4c8-8933e77e5c44"),
+                Author = "Fanman03"
 			};
 		}
 
@@ -180,31 +181,28 @@ namespace Source.Basics
 		// Token: 0x06000001 RID: 1 RVA: 0x00002050 File Offset: 0x00000250
 		public ColorCycleDriver()
 		{
-			for (int i = 0; i < 1; i++)
-			{
-				this.leds[i] = new ControlDevice.LedUnit
+
+				this.leds[0] = new ControlDevice.LedUnit
 				{
-					LEDName = "LED " + i.ToString(),
+					LEDName = "LED 0",
 					Data = new ControlDevice.LEDData
 					{
-						LEDNumber = i
+						LEDNumber = 0
 					}
 				};
-			}
-			this.timer = new Timer(new TimerCallback(this.TimerCallback), null, 0, 33);
+                this.timer = new Timer(new TimerCallback(this.TimerCallback), null, 0, 33);
 		}
 
 		// Token: 0x06000002 RID: 2 RVA: 0x000020E0 File Offset: 0x000002E0
 		private void TimerCallback(object state)
 		{
 			LEDColor ledcolor = LEDColor.FromHSV(105, 100, 100);
-			for (int i = 0; i < 20; i++)
-			{
-				float num = (float)((i + (this.cycle / 5)) % 20);
+
+				float num = (float)(((this.cycle / 5)) % 20);
 				double num2 = (double)num / 20.0;
 				int num3 = (int)(num2 * 360.0);
-				this.leds[i].Color = LEDColor.FromHSV(num3, 100, 100);
-			}
+				this.leds[0].Color = LEDColor.FromHSV(num3, 100, 100);
+
 			this.cycle += configModel.Speed;
 		}
 

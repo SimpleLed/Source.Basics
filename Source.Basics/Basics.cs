@@ -246,7 +246,8 @@ namespace Source.Basics
 				SupportsPush = false,
 				IsSource = true,
 				SupportsCustomConfig = true,
-				Id = Guid.Parse("4fc351e2-2ace-456f-a97f-f61de910202f")
+				Id = Guid.Parse("4fc351e2-2ace-456f-a97f-f61de910202f"),
+                Author = "Fanman03"
 			};
 		}
 
@@ -391,7 +392,8 @@ namespace Source.Basics
 				SupportsPush = false,
 				IsSource = true,
 				SupportsCustomConfig = true,
-				Id = Guid.Parse("08803b6f-ecce-4f11-9981-26a734b0e3a6")
+				Id = Guid.Parse("08803b6f-ecce-4f11-9981-26a734b0e3a6"),
+                Author = "Fanman03"
 			};
 		}
 
@@ -543,7 +545,8 @@ namespace Source.Basics
 				SupportsPush = false,
 				IsSource = true,
 				SupportsCustomConfig = true,
-				Id = Guid.Parse("de9b0292-051e-4e5a-8ac1-8bbb6741e90e")
+				Id = Guid.Parse("de9b0292-051e-4e5a-8ac1-8bbb6741e90e"),
+                Author = "Fanman03"
 			};
 		}
 
@@ -674,7 +677,8 @@ namespace Source.Basics
 				SupportsPush = false,
 				IsSource = true,
 				SupportsCustomConfig = true,
-				Id = Guid.Parse("504f988c-a36c-420a-a83c-105665be18ff")
+				Id = Guid.Parse("504f988c-a36c-420a-a83c-105665be18ff"),
+                Author = "Fanman03"
 			};
 		}
 
